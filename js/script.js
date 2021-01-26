@@ -1,5 +1,7 @@
 let numberOfFilms = askHowManyMoves();
 
+checkUserStatus(numberOfFilms);
+
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
@@ -80,6 +82,16 @@ function askHowManyMoves() {
 
     return userUnswer;
 
+}
+
+function checkUserStatus(x) {
+    if (x < 10){
+        alert(`You whached not so many mivies.`);
+    } else if (x >=10 && x < 30){
+        alert(`You classic movies whatcher.`);
+    } else if (x >= 30){
+        alert(`You are big movie fan`);
+    }
 }
 
 // alert for user
